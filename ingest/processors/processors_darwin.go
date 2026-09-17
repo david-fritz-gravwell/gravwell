@@ -17,6 +17,7 @@ import (
 func checkProcessorOS(id string) error {
 	switch id {
 	case PersistentBufferProcessor:
+	case GPSProcessor:
 	default:
 		return ErrUnknownProcessor
 	}
@@ -31,6 +32,8 @@ func processorLoadConfigOS(vc *config.VariableConfig) (cfg interface{}, err erro
 	switch strings.TrimSpace(strings.ToLower(pb.Type)) {
 	case PersistentBufferProcessor:
 		cfg, err = PersistentBufferLoadConfig(vc)
+	case GPSProcessor:
+		cfg, err = GPSLoadConfig(vc)
 	default:
 		err = ErrUnknownProcessor
 	}
@@ -50,6 +53,12 @@ func newProcessorOS(vc *config.VariableConfig, tgr Tagger) (p Processor, err err
 			return
 		}
 		p, err = NewPersistentBuffer(cfg, tgr)
+	case GPSProcessor:
+		var cfg GPSConfig
+		if err = vc.MapTo(&cfg); err != nil {
+			return
+		}
+		p, err = NewGPSProcessor(cfg)
 	default:
 		err = ErrUnknownProcessor
 	}
