@@ -50,6 +50,7 @@ require (
 	github.com/miekg/dns v1.1.56
 	github.com/minio/highwayhash v1.0.0
 	github.com/open2b/scriggo v0.56.1
+	github.com/openconfig/gnmi v0.14.1
 	github.com/rivo/tview v0.0.0-20240118093911-742cf086196e
 	github.com/shirou/gopsutil v2.20.9+incompatible
 	github.com/stretchr/testify v1.12.1

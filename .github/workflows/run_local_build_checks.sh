@@ -29,6 +29,7 @@ echo "Running go vet"
         go vet ./ingesters/llm_ingester/...
         go vet ./ingesters/macosUnifiedLog
         go vet ./ingesters/snmp
+        go vet ./ingesters/gnmi
         go vet ./ingesters/AzureEventHubs
         go vet ./ingesters/HttpIngester
         go vet ./ingesters/MSGraphIngester
@@ -59,6 +60,7 @@ echo "Running go test -v"
         go test -v ./ingesters/llm_ingester/...
         go test -v ./ingesters/macosUnifiedLog
         go test -v ./ingesters/snmp
+        go test -v ./ingesters/gnmi
         go test -v ./ingesters/AzureEventHubs
         go test -v ./ingesters/HttpIngester
         go test -v ./ingesters/MSGraphIngester
@@ -130,6 +132,7 @@ echo "running staticcheck"
 	staticcheck ./ingesters/SimpleRelay/...
 	staticcheck ./ingesters/singleFile/...
 	staticcheck ./ingesters/snmp/...
+	staticcheck ./ingesters/gnmi/...
 	staticcheck ./ingesters/sqsIngester/...
 	staticcheck ./ingesters/xlsxIngester/...
 	staticcheck ./ingesters/HttpIngester/...
@@ -172,6 +175,7 @@ echo "running govulncheck on everything"
         govulncheck -test ./ingesters/diskmonitor
         govulncheck -test ./ingesters/session
         govulncheck -test ./ingesters/snmp
+        govulncheck -test ./ingesters/gnmi
         govulncheck -test ./ingesters/xlsxIngester
         govulncheck -test ./ingesters/multiFile
         GOOS=linux govulncheck -test ./ingesters/Shodan
@@ -223,6 +227,7 @@ echo "Running build tests"
         go build -o /dev/null ./ingesters/pcapFileIngester
         go build -o /dev/null ./ingesters/llm_ingester
         go build -o /dev/null ./ingesters/snmp
+        go build -o /dev/null ./ingesters/gnmi
         go build -o /dev/null ./hosted/runner
         GOOS=darwin GOARCH=amd64 go build -o /dev/null ./ingesters/fileFollow
         GOOS=darwin GOARCH=arm64 go build -o /dev/null ./ingesters/fileFollow

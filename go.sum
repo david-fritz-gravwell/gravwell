@@ -264,6 +264,8 @@ github.com/mitchellh/mapstructure v1.1.2/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
 github.com/open2b/scriggo v0.56.1 h1:h3IVNM0OEvszbtdmukaJj9lPo/xSvHPclYm/RqQqUxY=
 github.com/open2b/scriggo v0.56.1/go.mod h1:FJS0k7CaKq2sNlrqAGMwU4dCltYqC1c+Eak3dj5w26Q=
+github.com/openconfig/gnmi v0.14.1 h1:qKMuFvhIRR2/xxCOsStPQ25aKpbMDdWr3kI+nP9bhMs=
+github.com/openconfig/gnmi v0.14.1/go.mod h1:whr6zVq9PCU8mV1D0K9v7Ajd3+swoN6Yam9n8OH3eT0=
 github.com/pierrec/lz4/v4 v4.1.22 h1:cKFw6uJDK+/gfw5BcDL0JL5aBsAFdsIT18eRtLj7VIU=
 github.com/pierrec/lz4/v4 v4.1.22/go.mod h1:gZWDp/Ze/IJXGXf23ltt2EXimqmTUXEy0GFuRQyBid4=
 github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c h1:+mdjkGKdHQG3305AYmdv1U2eRNDiU2ErMBj1gwrq8eQ=
